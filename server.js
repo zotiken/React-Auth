@@ -1,16 +1,15 @@
 const express = require("express");
 const app = express();
-const config = require("config")
-const PORT =  process.env.PORT || config.get("app.port") || 5000;
+const PORT =  process.env.PORT ||  5000;
 const MODE =  process.env.MODE || "development";
 
-const isDev = () => { return MODE === "development"};
-const isProd = !isDev();
+// const isDev = () => { return MODE === "development"};
+// const isProd = !isDev();
 
 
-if (isProd) {
-  app.use(express.static(__dirname, "build"))
-}
+// if (isProd) {
+//   app.use(express.static(__dirname, "build"))
+// }
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
