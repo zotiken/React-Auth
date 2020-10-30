@@ -1,0 +1,27 @@
+{
+  "name": "serviceshortlink",
+  "version": "1.0.0",
+  "description": "service",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm run start --prefix client ",
+    "server": " cross-env MODE='development' nodemon server.js",
+    "app": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "config": "^3.3.2",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.7",
+    "nodemon": "^2.0.4",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "emotion": "^10.0.27"
+  }
+}
